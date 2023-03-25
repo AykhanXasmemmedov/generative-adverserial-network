@@ -291,7 +291,7 @@ def model_training(generator,discriminator,dataset,numepoch):
     optimizerDis=optim.Adam(discriminator.parameters(),lr=.0002,betas=(.5,.99))
 
     loss_function_dis=nn.BCELoss()
-    loss_function_genL1=nn.MSELoss()
+    loss_function_genL1=nn.L1Loss()
     l1_loss_weight=100
     
     for epoch in range(numepoch):
